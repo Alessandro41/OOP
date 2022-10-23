@@ -32,7 +32,16 @@ public class MagicSquare {
     }
 
     public void add(int x) {
-        if (isFull())
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (square[i][j] == x)
+                    return;
+                else if (square[i][j] == 0) {
+                    square[i][j] = x;
+                    return;
+                }
+            }
+        }
     }
 
     public boolean isMagic() {
